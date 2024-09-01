@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You, My Love!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('images/image2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4em;
+            margin-bottom: 20px;
+            color: #ff6699;
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .heart-icon {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-15px);
+            }
+        }
+
+        .confetti {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        .confetti span {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff6699;
+            opacity: 0.8;
+            animation: fall 5s linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        span:nth-child(odd) {
+            background-color: #ff3366;
+        }
+
+        span:nth-child(3n) {
+            width: 8px;
+            height: 8px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #ff6699;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ff3366;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="images/image4.png" alt="Heart" class="heart-icon">
+        <h1>Thank You, My Love!</h1>
+        <p>You’ve made me the happiest person in the world. I can't wait to start this beautiful journey with you. Together, forever.</p>
+        <a href="https://www.oyorooms.com/" class="button">Let’s Plan Our Future ❤️</a>
+
+        <div class="confetti">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <script>
+        function createConfetti() {
+            const confettiContainer = document.querySelector('.confetti');
+            for (let i = 0; i < 100; i++) {
+                const confettiPiece = document.createElement('span');
+                confettiPiece.style.left = Math.random() * 100 + 'vw';
+                confettiPiece.style.animationDelay = Math.random() * 5 + 's';
+                confettiContainer.appendChild(confettiPiece);
+            }
+        }
+
+        createConfetti();
+    </script>
+</body>
+</html>
