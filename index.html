@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Note </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Love Note Section -->
+        <div id="loveNoteSection">
+            <div class="heart"></div>
+            <h1>Dear Divya</h1>
+            <p>You are the light of my life. Every moment with you is a blessing, and I'm so lucky to have you by my side.</p>
+            <button onclick="revealMessage()">Click to Reveal a Surprise</button>
+            <div id="message" class="hidden">
+                <p>I love you more than words can say! ❤️</p>
+                <button onclick="goToProposal()">Next</button>
+            </div>
+        </div>
+
+        <!-- Proposal Section -->
+        <div id="proposalSection" class="hidden">
+            <h1>Will You Marry Me?</h1>
+            <div class="ring">
+                <img src="images/image3.jpg" alt="Engagement Ring">
+            </div>
+            <button onclick="showProposalMessage()">Click to Answer</button>
+            <div id="proposalMessage" class="hidden">
+                <h2>There is no option to say 'No'...</h2>
+                <p>Because I can't imagine my life without you. Will you make me the happiest person in the world and say 'Yes'?</p>
+                <div class="buttons">
+                    <button id="yesButton" onclick="acceptProposal()">Yes, of course!</button>
+                    <button id="noButton" onmouseover="swapButtons()">No</button>
+                </div>
+            </div>
+            <div id="finalMessage" class="hidden">
+                <h2>Yay! 🎉</h2>
+                <p>Thank you for making me the happiest person alive. I love you forever!</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
